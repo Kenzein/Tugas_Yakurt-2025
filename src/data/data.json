@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Interstellar",
+    "genre": "Sci-fi",
+    "duration": "2h 49m",
+    "poster": "https://plus.unsplash.com/premium_photo-1682124752476-40db22034a58?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW50ZXJzdGVsbGFyfGVufDB8MnwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=400",
+    "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."
+  },
+  {
+    "id": 2,
+    "title": "Inception",
+    "genre": "Sci-fi",
+    "duration": "2h 49m",
+    "poster": "https://plus.unsplash.com/premium_photo-1673652043195-651d0c1a4feb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5jZXB0aW9ufGVufDB8MnwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=400",
+    "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O."
+  },
+  {
+    "id": 3,
+    "title": "Oppenheimer",
+    "genre": "Sci-fi",
+    "duration": "2h 49m",
+    "poster": "https://plus.unsplash.com/premium_photo-1661840242145-4072396bce5d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RGVzdHJveXxlbnwwfDJ8MHx8fDA%3D&auto=format&fit=crop&q=60&w=400",
+    "description": "The story of J. Robert Oppenheimer and the creation of the atomic bomb."
+  },
+  {
+    "id": 4,
+    "title": "Oppenheimer",
+    "genre": "Romantic",
+    "duration": "2h 49m",
+    "poster": "https://plus.unsplash.com/premium_photo-1661840242145-4072396bce5d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RGVzdHJveXxlbnwwfDJ8MHx8fDA%3D&auto=format&fit=crop&q=60&w=400",
+    "description": "The story of J. Robert Oppenheimer and the creation of the atomic bomb."
+  },
+  {
+    "id": 5,
+    "title": "Oppenheimer",
+    "genre": "Adventure",
+    "duration": "2h 49m",
+    "poster": "https://plus.unsplash.com/premium_photo-1661840242145-4072396bce5d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RGVzdHJveXxlbnwwfDJ8MHx8fDA%3D&auto=format&fit=crop&q=60&w=400",
+    "description": "The story of J. Robert Oppenheimer and the creation of the atomic bomb."
+  }
+]
