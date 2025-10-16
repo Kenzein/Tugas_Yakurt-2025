@@ -8,16 +8,27 @@ const MovieList = () => {
     setMovies(data);
   }, []);
   // Filter list Genre start
-  const genres = ["all", ...new Set(data.map((movie) => movie.genre))];
+  const genres = [
+    "all",
+    ...new Set(
+      data.flatMap((movie) =>
+        Array.isArray(movie.genre) ? movie.genre : [movie.genre]
+      )
+    ),
+  ];
 
   const filteredMovies =
     selectedGenre === "all"
       ? movies
-      : movies.filter((movie) => movie.genre === selectedGenre);
+      : movies.filter((movie) =>
+          Array.isArray(movie.genre)
+            ? movie.genre.includes(selectedGenre)
+            : movie.genre === selectedGenre
+        );
   // Filter list Genre end
 
   return (
-    <div className="p-6">
+    <div className="p-6 pt-20">
       <h2 className="text-2xl font-bold mb-4">
         Daftar Film yang Sedang Tayang
       </h2>

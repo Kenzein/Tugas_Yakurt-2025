@@ -1,1 +1,14 @@
 @import "tailwindcss";
+@layer utilities {
+  body {
+    font-family: "Poppins, Arial, Helvetica, sans-serif";
+    background: #000000;
+    background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 1) 1%,
+      rgba(255, 5, 5, 1) 39%,
+      rgba(0, 212, 255, 1) 91%
+    );
+    min-height: 100vh;
+  }
+}

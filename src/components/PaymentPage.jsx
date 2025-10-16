@@ -52,21 +52,21 @@ const PaymentPage = () => {
       <div className="flex gap-6 mb-6">
         <img src={movie.poster} alt={movie.title} className="w-40 rounded" />
         <div>
-          <h1 className="text-2xl font-bold">{movie.title}</h1>
-          <p className="text-gray-600">Genre: {movie.genre}</p>
-          <p className="text-gray-600">Durasi: {movie.duration}</p>
+          <h1 className="text-3xl font-bold">{movie.title}</h1>
+          <p className="text-white">Genre: {movie.genre}</p>
+          <p className="text-white">Durasi: {movie.duration}</p>
         </div>
       </div>
       {/* Form Pembayaran */}
       <form
         onSubmit={handleSubmit}
-        className="space-y-4 bg-indigo-500 p-5 shadow rounded"
+        className="space-y-4 p-5 shadow-2xl rounded"
       >
         {/* Nama */}
         <input
           type="text"
           placeholder="Nama Lengkap"
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded placeholder:text-[#d1cece] "
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           required
@@ -75,7 +75,7 @@ const PaymentPage = () => {
         <input
           type="tel"
           placeholder="Nomor Hp"
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded placeholder:text-[#d1cece] "
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           required
@@ -84,7 +84,7 @@ const PaymentPage = () => {
         <input
           type="email"
           placeholder="Email (opsional)"
-          className="w-full border p-2 rounded"
+          className="w-full border p-2  placeholder:text-[#d1cece] "
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         />

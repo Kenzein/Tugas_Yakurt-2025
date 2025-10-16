@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Particles from "../../ReactAnim/Particles/Particles.jsx";
-import Text from "../templates/Text.jsx";
+import Text from "../template/Text.jsx";
 
 const Home = () => {
   const navigate = useNavigate();

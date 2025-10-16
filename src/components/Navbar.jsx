@@ -14,7 +14,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="p-4 bg-gray-900 text-white flex justify-between">
+    <nav className="p-4 bg-[rgba(0,0,0,0.5)] bg-opacity-20 backdrop-blur-md shadow-md text-white flex justify-between fixed top-0 left-0 w-full">
       <h2 className="text-xl font-bold text-red-500">CinteTix</h2>
       <div className="flex gap-4">
         <button onClick={() => navigate("/")} className="hover:underline">
@@ -30,7 +30,7 @@ const Navbar = () => {
         {/* popup */}
         {showHistory && (
           <div className="fixed inset-0 bg-whitesmoke-50 bg-opacity-100 flex justify-center items-center z-50">
-            <div className="bg-white rounded-xl shadow-lg p-6 w-full max-w-md relative text-gray-600">
+            <div className="bg-white rounded-xl border-2 border-gray-300 shadow-lg p-6 w-full max-w-md relative text-gray-600">
               <div className="absolute top-2 right-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

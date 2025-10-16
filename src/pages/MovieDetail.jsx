@@ -15,7 +15,7 @@ const MovieDetail = () => {
     );
   }
   return (
-    <div className="p-6 max-w-4xl mx-auto">
+    <div className="p-6 pt-20 max-w-4xl mx-auto">
       {/* Tombol kembali */}
       <button
         onClick={() => navigate(-1)}
@@ -31,16 +31,16 @@ const MovieDetail = () => {
         />
         <div>
           <h1 className="text-3xl font-bold">{movie.title}</h1>
-          <p className="text-gray-600 mt-2">
+          <p className="text-white mt-2">
             <span className="font-medium">Genre: </span>
             {movie.genre}
           </p>
-          <p className="text-gray-600 mt-2">
+          <p className="text-white mt-2">
             <span className="font-medium">Durasi: </span>
             {movie.duration}
           </p>
           <p className="mt-4">
-            <span className="font-medium text-gray-600">Deskripsi: </span>
+            <span className="font-medium text-white"></span>
             {movie.description}
           </p>
         </div>
