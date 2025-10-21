@@ -4,11 +4,11 @@ import RotatingText from "../../ReactAnim/RotatingText/RotatingText.jsx";
 const Text = () => {
   return (
     <div className="flex flex-col items-center justify-center ">
-      <h1 className="text-3xl font-bold text-galaxy">
+      <h1 className="text-3xl font-bold text-white">
         <SplitText text="Selamat Datang di Bioskop APP" />
       </h1>
       <div className="flex flex-col justify-center items-center">
-        <span className="mt-2 text-galaxy-p">
+        <span className="mt-2 text-red-500 text-2xl font-bold">
           <RotatingText
             texts={["Pesan ", "Tiket", "Bioskop", "Kapan dan Dimana pun"]}
             mainClassName="font-semibold text-lg px-2 sm:px-2 md:px-3 text-galaxy-p overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"

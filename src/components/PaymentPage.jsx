@@ -52,7 +52,7 @@ const PaymentPage = () => {
       <div className="flex gap-6 mb-6">
         <img src={movie.poster} alt={movie.title} className="w-40 rounded" />
         <div>
-          <h1 className="text-3xl font-bold">{movie.title}</h1>
+          <h1 className="text-3xl font-bold text-red-500">{movie.title}</h1>
           <p className="text-white">Genre: {movie.genre}</p>
           <p className="text-white">Durasi: {movie.duration}</p>
         </div>
@@ -90,7 +90,7 @@ const PaymentPage = () => {
         />
         {/* Metode Pembayaran */}
         <select
-          className="w-full border p-2 rounded"
+          className="w-full border border-black p-2 rounded text-red-500 "
           value={formData.paymentMethod}
           onChange={(e) =>
             setFormData({ ...formData, paymentMethod: e.target.value })

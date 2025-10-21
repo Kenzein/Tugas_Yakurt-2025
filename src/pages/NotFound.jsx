@@ -4,7 +4,7 @@ const NotFound = () => {
       <h1 className="text-4xl font-bold mb-4">
         ERROR 404 - Halaman Tidak Ditemukan
       </h1>
-      <p className="text-gray-600 mb-6">URL yang kamu akses tidak tersedia</p>
+      <p className="text-white mb-6">URL yang kamu akses tidak tersedia</p>
 
       <a
         href="/"

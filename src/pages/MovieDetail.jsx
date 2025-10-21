@@ -27,10 +27,10 @@ const MovieDetail = () => {
         <img
           src={movie.poster}
           alt={movie.title}
-          className="w-64 rounded-lg shadow"
+          className="w-64 rounded-lg shadow "
         />
         <div>
-          <h1 className="text-3xl font-bold">{movie.title}</h1>
+          <h1 className="text-3xl font-bold text-red-500">{movie.title}</h1>
           <p className="text-white mt-2">
             <span className="font-medium">Genre: </span>
             {movie.genre}
@@ -39,15 +39,15 @@ const MovieDetail = () => {
             <span className="font-medium">Durasi: </span>
             {movie.duration}
           </p>
-          <p className="mt-4">
-            <span className="font-medium text-white"></span>
+          <p className="mt-4 text-white">
+            <span className="font-medium "></span>
             {movie.description}
           </p>
         </div>
       </div>
       <button
         onClick={() => navigate(`/movies/${id}/payment`)}
-        className="mt-4 px-5 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        className="mt-4 px-5 py-2 bg-red-500 text-white rounded hover:bg-black"
       >
         Pesan Tiket
       </button>

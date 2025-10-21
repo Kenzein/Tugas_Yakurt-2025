@@ -29,12 +29,12 @@ const MovieList = () => {
 
   return (
     <div className="p-6 pt-20">
-      <h2 className="text-2xl font-bold mb-4">
+      <h2 className="text-2xl text-white font-bold mb-4">
         Daftar Film yang Sedang Tayang
       </h2>
-      <div className="mb-4">
+      <div className="mb-4 ">
         <select
-          className="border p-2 rounded"
+          className=" bg-red-500 text-white p-2 rounded"
           value={selectedGenre}
           onChange={(e) => setSelectedGenre(e.target.value)}
         >
@@ -45,7 +45,7 @@ const MovieList = () => {
           ))}
         </select>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 text-white">
         {filteredMovies.map((movie) => (
           <MovieCard
             key={movie.id}
