@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import data from "../data/data.json";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -7,6 +7,7 @@ import Back from "../atoms/Back_Button.jsx";
 const PaymentPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
   const [movie, setMovie] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
@@ -22,6 +23,14 @@ const PaymentPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const ticketCount = location.state?.ticketCount || 1;
+    const confirmed = window.confirm(
+      `Apakah Anda yakin ingin memesan ${ticketCount} tiket untuk film "${movie.title}"`
+    );
+    if (!confirmed) {
+      return;
+    }
+
     const history = JSON.parse(localStorage.getItem("ticket_history") || "[]");
 
     localStorage.setItem(
@@ -43,13 +52,18 @@ const PaymentPage = () => {
   return (
     <div className="max-w-3xl mx-auto p-6">
       {/* Tombol Kembali */}
-      <Back />
+      <div className="m-5">
+        <Back />
+      </div>
       {/* Informasi Film */}
       <div className="flex gap-6 mb-6">
         <img src={movie.poster} alt={movie.title} className="w-40 rounded" />
         <div>
-          <h1 className="text-3xl font-bold text-red-500">{movie.title}</h1>
-          <p className="text-white">Genre: {movie.genre}</p>
+          <h1 className="text-3xl font-bold text-gray-700">{movie.title}</h1>
+          <p className="text-white">
+            Genre:{" "}
+            {Array.isArray(movie.genre) ? movie.genre.join(", ") : movie.genre}
+          </p>
           <p className="text-white">Durasi: {movie.duration}</p>
         </div>
       </div>
@@ -95,7 +109,6 @@ const PaymentPage = () => {
         >
           <option value="">Pilih Metode Pembayaran</option>
           <option value="transfer">Transfer Bank</option>
-          <option value="ewallet">E-Wallet</option>
           <option value="cod">Bayar di tempat</option>
         </select>
         {/* Submit */}

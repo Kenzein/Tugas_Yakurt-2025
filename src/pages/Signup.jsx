@@ -24,7 +24,7 @@ export default function Signup() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-500">
+    <div className="min-h-screen flex items-center justify-center ">
       <div className="bg-white p-8 rounded-xl shadow-black w-full max-w-md transition duration-300 shadow-[20px_20px_50px_rgba(0,0,0,0.5)] hover:shadow-[10px_10px_20px_rgba(0,0,0,0.5)]">
         <h2 className="text-2xl font-bold text-center mb-6 text-gray-600">
           Buat Akun Baru

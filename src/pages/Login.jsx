@@ -25,17 +25,17 @@ function Login() {
     }
   };
   return (
-    <div className="min-h-screen flex bg-gradient-to-br from-blue-500 to-blue-700">
+    <div className="min-h-screen flex ">
       {/* Card Sambutan */}
-      <div className="hidden md:flex flex-col justify-center items-center text-white w-1/2 p-10 rounded-r-3xl shadow-2xl">
-        <h1 className="text-4xl font-bold mb-3 text-center drop-shadow-lg">
-          Selamat Datang di Aplikasi Cintetix
+      <div className="hidden md:flex flex-col justify-center items-center text-white w-1/2 p-10 ">
+        <h1 className="text-4xl font-bold mb-3 text-center text-medieval drop-shadow-[10px_10px_5px_rgba(0,0,0)]">
+          Selamat Datang di Cintetix
         </h1>
-        <p>Akses seluruh tiket film pada satu aplikasi</p>
+        <p className="">Akses seluruh tiket film pada satu aplikasi</p>
       </div>
-      <div className="flex justify-center items-center w-full md:w-1/2 p-6">
+      <div className="flex justify-center items-center w-full md:w-1/2 p-6 ">
         {/* Card Login */}
-        <div className="bg-white p-8 rounded-xl shadow-black w-full max-w-md transition duration-300 shadow-[20px_20px_50px_rgba(0,0,0,0.5)] hover:shadow-[10px_10px_20px_rgba(0,0,0,0.5)]">
+        <div className="bg-white p-8 rounded-xl  w-full max-w-md transition duration-300 shadow-[20px_20px_50px_rgba(0,0,0,0.75)] hover:shadow-[10px_10px_20px_rgba(0,0,0,0.5)]">
           <h2 className="text-2xl font-bold text-center mb-6 text-gray-600">
             Masuk ke Akun Anda
           </h2>

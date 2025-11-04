@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import LogoutIcon from "@mui/icons-material/Logout";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const [history, setHistory] = useState([]);
   const [showHistory, setShowHistory] = useState(false);
   const [userName, setUserName] = useState("");
+  const [avatarOpen, setAvatarOpen] = useState(false);
 
   useEffect(() => {
     const storedHistory = JSON.parse(
@@ -22,9 +25,10 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar*/}
-      <nav className="p-4 bg-[rgba(0,0,0,0.5)] backdrop-blur-md shadow-md text-white flex justify-between fixed top-0 left-0 w-full z-10">
+      <nav className="p-4 bg-[rgba(0,0,0,0.5)] backdrop-blur-md shadow-md text-white flex flex-col sm:flex-row sm:justify-between sm:items-center fixed top-0 left-0 w-full z-10 gap-2 sm:gap-0">
+        {/* "p-4 bg-[rgba(0,0,0,0.5)] backdrop-blur-md shadow-md text-white flex justify-between fixed top-0 left-0 w-full z-10" */}
         <h2
-          className="text-3xl font-bold text-red-500 cursor-pointer"
+          className="text-3xl font-bold text-red-500 cursor-pointer text-medieval sm: text-left"
           onClick={() => navigate("/movies")}
         >
           CinteTix
@@ -41,11 +45,33 @@ const Navbar = () => {
               {userName}
             </span>
           )}
-          <Avatar alt="{userName}"></Avatar>
+          <div
+            onClick={() => setAvatarOpen(!avatarOpen)}
+            className="cursor-pointer"
+          >
+            <Avatar alt="{userName}"></Avatar>
+            {/* logout */}
+            {avatarOpen && (
+              <div className="absolute right-4 mt-12 bg-white text-black rounded-lg shadow-lg p-3 w-40">
+                <Button
+                  variant="outlined"
+                  startIcon={<LogoutIcon />}
+                  onClick={() => {
+                    localStorage.removeItem("userName");
+                    localStorage.removeItem("ticket_history");
+                    localStorage.removeItem("userData");
+                    navigate("/login");
+                  }}
+                >
+                  Logout
+                </Button>
+              </div>
+            )}
+          </div>
         </div>
       </nav>
 
-      {/* popup */}
+      {/* popup history*/}
       {showHistory && (
         <div className="fixed inset-0 flex justify-center items-center bg-[rgba(0,0,0,0.2)] backdrop-blur-sm z-50">
           <div className="bg-white rounded-xl border border-gray-300 shadow-lg p-6 w-full max-w-md relative text-gray-700">

@@ -29,7 +29,7 @@ const MovieList = () => {
 
   return (
     <div className="p-6 pt-20">
-      <h2 className="text-2xl text-white font-bold mb-4">
+      <h2 className="text-2xl text-white font-bold mb-4 text-medieval">
         Daftar Film yang Sedang Tayang
       </h2>
       <div className="mb-4 ">
