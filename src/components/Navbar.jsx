@@ -25,7 +25,7 @@ const Navbar = () => {
       <nav className="p-4 bg-[rgba(0,0,0,0.5)] backdrop-blur-md shadow-md text-white flex justify-between fixed top-0 left-0 w-full z-10">
         <h2
           className="text-3xl font-bold text-red-500 cursor-pointer"
-          onClick={() => navigate("/home")}
+          onClick={() => navigate("/movies")}
         >
           CinteTix
         </h2>
@@ -37,7 +37,7 @@ const Navbar = () => {
             Lihat Riwayat
           </button>
           {userName && (
-            <span className="text-white text-xl font-medium border pt-1">
+            <span className="text-white text-xl font-medium pt-1">
               {userName}
             </span>
           )}

@@ -3,7 +3,7 @@ import Particles from "../../ReactAnim/Particles/Particles.jsx";
 import Text from "../template/Text.jsx";
 import { useState, useEffect } from "react";
 
-const Home = () => {
+const Welcome = () => {
   const navigate = useNavigate();
   const [userName, setUserName] = useState("");
 
@@ -33,7 +33,7 @@ const Home = () => {
       <div className="z-10 flex flex-col items-center gap-4">
         <Text userName={userName} />
         <button
-          onClick={() => navigate("/movies")}
+          onClick={() => navigate("/login")}
           className="border rounded shadow px-4 py-2 bg-red-600 text-white hover:bg-gray-900"
         >
           Explore
@@ -43,4 +43,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Welcome;

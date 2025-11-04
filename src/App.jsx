@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar.jsx";
 import PaymentPage from "./pages/PaymentPage.jsx";
 import SuccessPage from "./pages/SuccessPage .jsx";
 import MovieList from "./pages/MovieList.jsx";
-import Home from "./pages/Home.jsx";
+import Welcome from "./pages/Welcome.jsx";
 import MovieDetail from "./pages/MovieDetail.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import Login from "./pages/Login.jsx";
@@ -15,20 +15,11 @@ const router = createBrowserRouter([
     path: "/",
     element: (
       <>
-        <Navbar />
-        <Home />
+        <Welcome></Welcome>
       </>
     ),
   },
-  {
-    path: "/home",
-    element: (
-      <>
-        <Navbar />
-        <Home />
-      </>
-    ),
-  },
+
   {
     path: "/movies",
     element: (
@@ -42,6 +33,7 @@ const router = createBrowserRouter([
     path: "/movies/:id",
     element: (
       <>
+        <Navbar />
         <MovieDetail />
       </>
     ),

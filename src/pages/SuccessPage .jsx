@@ -11,7 +11,7 @@ const SuccessPage = () => {
         <p className="text-3xl text-white">Tidak ada data pembayaran.</p>
         <button
           className="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/movies")}
         >
           Kembali ke Beranda
         </button>
@@ -19,7 +19,8 @@ const SuccessPage = () => {
     );
   }
   return (
-    <div className="max-w-lg mx-auto p-6 text-center mt-10 bg-white shadow rounded">
+    // <div className="flex items-center justify-center min-h-screen">
+    <div className="max-w-lg mx-auto p-10 text-center mt-10 bg-white shadow rounded-3xl">
       <h1 className="text-2xl font-bold mb-4">Pembayaran Berhasil</h1>
       <p className="mb-2">
         Film: <b>{data.title}</b>
@@ -31,12 +32,13 @@ const SuccessPage = () => {
         Metode Pembayaran: <b>{data.paymentMethod}</b>
       </p>
       <button
-        className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-        onClick={() => navigate("/")}
+        className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700"
+        onClick={() => navigate("/movies")}
       >
         Kembali ke Beranda
       </button>
     </div>
+    // </div>
   );
 };
 export default SuccessPage;

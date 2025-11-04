@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import data from "../data/data.json";
 import { useState } from "react";
 import { useEffect } from "react";
+import Back from "../atoms/Back_Button.jsx";
 
 const PaymentPage = () => {
   const { id } = useParams();
@@ -42,12 +43,7 @@ const PaymentPage = () => {
   return (
     <div className="max-w-3xl mx-auto p-6">
       {/* Tombol Kembali */}
-      <button
-        onClick={() => navigate(-1)}
-        className="mb-4 px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
-      >
-        Kembali
-      </button>
+      <Back />
       {/* Informasi Film */}
       <div className="flex gap-6 mb-6">
         <img src={movie.poster} alt={movie.title} className="w-40 rounded" />
