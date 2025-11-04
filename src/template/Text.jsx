@@ -1,11 +1,11 @@
 import SplitText from "../../ReactAnim/SplitText/SplitText.jsx";
 import RotatingText from "../../ReactAnim/RotatingText/RotatingText.jsx";
 
-const Text = () => {
+const Text = ({ userName }) => {
   return (
     <div className="flex flex-col items-center justify-center ">
       <h1 className="text-3xl font-bold text-white">
-        <SplitText text="Selamat Datang di Bioskop APP" />
+        <SplitText text={`Selamat Datang ${userName || ""}`} />
       </h1>
       <div className="flex flex-col justify-center items-center">
         <span className="mt-2 text-red-500 text-2xl font-bold">

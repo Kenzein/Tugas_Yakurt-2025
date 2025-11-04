@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @layer utilities {
   body {
-    font-family: "Poppins, Arial, Helvetica, sans-serif";
+    font-family: "Roboto ,Poppins, Arial, Helvetica, sans-serif";
     background: #000000;
     background: linear-gradient(
       45deg,

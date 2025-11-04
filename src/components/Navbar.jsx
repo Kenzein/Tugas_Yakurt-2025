@@ -1,33 +1,47 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Avatar from "@mui/material/Avatar";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const [history, setHistory] = useState([]);
   const [showHistory, setShowHistory] = useState(false);
+  const [userName, setUserName] = useState("");
 
   useEffect(() => {
     const storedHistory = JSON.parse(
       localStorage.getItem("ticket_history") || "[]"
     );
     setHistory(storedHistory);
+    const storedName = localStorage.getItem("userName");
+    if (storedName) {
+      setUserName(storedName);
+    }
   }, []);
 
   return (
     <>
       {/* Navbar*/}
       <nav className="p-4 bg-[rgba(0,0,0,0.5)] backdrop-blur-md shadow-md text-white flex justify-between fixed top-0 left-0 w-full z-10">
-        <h2 className="text-3xl font-bold text-red-500">CinteTix</h2>
+        <h2
+          className="text-3xl font-bold text-red-500 cursor-pointer"
+          onClick={() => navigate("/home")}
+        >
+          CinteTix
+        </h2>
         <div className="flex gap-4">
-          <button onClick={() => navigate("/")} className="hover:underline">
-            Home
-          </button>
           <button
             onClick={() => setShowHistory(true)}
-            className="px-4 py-2 bg-red-500 text-white rounded hover:bg-black bg-opacity-20"
+            className="px-4 py-2 bg-red-500 text-white rounded hover:bg-black bg-opacity-20 "
           >
             Lihat Riwayat
           </button>
+          {userName && (
+            <span className="text-white text-xl font-medium border pt-1">
+              {userName}
+            </span>
+          )}
+          <Avatar alt="{userName}"></Avatar>
         </div>
       </nav>
 

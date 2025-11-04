@@ -1,9 +1,18 @@
 import { useNavigate } from "react-router-dom";
 import Particles from "../../ReactAnim/Particles/Particles.jsx";
 import Text from "../template/Text.jsx";
+import { useState, useEffect } from "react";
 
 const Home = () => {
   const navigate = useNavigate();
+  const [userName, setUserName] = useState("");
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem("userName");
+    if (storedUser) {
+      setUserName(storedUser);
+    }
+  }, []);
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center  gap-4 p-6">
@@ -22,7 +31,7 @@ const Home = () => {
         />
       </div>
       <div className="z-10 flex flex-col items-center gap-4">
-        <Text />
+        <Text userName={userName} />
         <button
           onClick={() => navigate("/movies")}
           className="border rounded shadow px-4 py-2 bg-red-600 text-white hover:bg-gray-900"
